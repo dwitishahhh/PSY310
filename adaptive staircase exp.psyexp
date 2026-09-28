@@ -53,23 +53,6 @@
   </Settings>
   <Routines>
     <Routine name="trial">
-      <CodeComponent name="50 50" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="    " valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((Math.random() &gt; 0.5)) {&amp;#10;    direction = (- level);&amp;#10;    corr_resp = &quot;left&quot;;&amp;#10;} else {&amp;#10;    direction = level;&amp;#10;    corr_resp = &quot;right&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if random() &gt; 0.5: # 50:50 probabilty&amp;#10;    direction = -level&amp;#10;    corr_resp = 'left'&amp;#10;else:&amp;#10;    direction = level&amp;#10;    corr_resp = 'right'&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="psychoJS.experiment.addData(&quot;corrAns&quot;, corr_resp);&amp;#10;psychoJS.experiment.addData(&quot;tilt&quot;, direction);&amp;#10;psychoJS.experiment.addData(&quot;key_resp_corr&quot;, key_resp.corr);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="thisExp.addData('corrAns', corr_resp)&amp;#10;thisExp.addData('tilt', direction)&amp;#10;thisExp.addData('key_resp_corr', key_resp.corr)" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="50 50" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <RoutineSettingsComponent name="trial" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -86,6 +69,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="var_50_50" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="    " valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((Math.random() &gt; 0.5)) {&amp;#10;    direction = (- level);&amp;#10;    corr_resp = &quot;left&quot;;&amp;#10;} else {&amp;#10;    direction = level;&amp;#10;    corr_resp = &quot;right&quot;;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if random() &gt; 0.5: # 50:50 probabilty&amp;#10;    direction = -level&amp;#10;    corr_resp = 'left'&amp;#10;else:&amp;#10;    direction = level&amp;#10;    corr_resp = 'right'&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;corrAns&quot;, corr_resp);&amp;#10;psychoJS.experiment.addData(&quot;tilt&quot;, direction);&amp;#10;psychoJS.experiment.addData(&quot;key_resp_corr&quot;, key_resp.corr);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData('corrAns', corr_resp)&amp;#10;thisExp.addData('tilt', direction)&amp;#10;thisExp.addData('key_resp_corr', key_resp.corr)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="var_50_50" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <PolygonComponent name="FIXATION" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -167,20 +167,20 @@
     </Routine>
   </Routines>
   <Flow>
-    <LoopInitiator loopType="StairHandler" name="staircase">
+    <LoopInitiator loopType="StairHandler" name="staircasee">
       <Param name="N down" updates="None" val="3" valType="code"/>
       <Param name="N reversals" updates="None" val="" valType="code"/>
       <Param name="N up" updates="None" val="1" valType="code"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="max value" updates="None" val="20" valType="code"/>
       <Param name="min value" updates="None" val="1" valType="code"/>
-      <Param name="nReps" updates="None" val="50" valType="code"/>
-      <Param name="name" updates="None" val="staircase" valType="code"/>
+      <Param name="nReps" updates="None" val="100                    " valType="code"/>
+      <Param name="name" updates="None" val="staircasee" valType="code"/>
       <Param name="start value" updates="None" val="10" valType="code"/>
-      <Param name="step sizes" updates="None" val="[2,1,1,0,5]" valType="list"/>
+      <Param name="step sizes" updates="None" val="[2,1,1,0.5]" valType="list"/>
       <Param name="step type" updates="None" val="lin" valType="str"/>
     </LoopInitiator>
     <Routine name="trial"/>
-    <LoopTerminator name="staircase"/>
+    <LoopTerminator name="staircasee"/>
   </Flow>
 </PsychoPy2experiment>
